@@ -12,7 +12,7 @@ const    uint16_t coke_duration = 10;  //HIER wieviel Sekunden braucht cola
 ISR(TIMER1_COMPA_vect) {
   if (coke_alarm == true)
   {
-    coke_time -= 1;
+    coke_time = coke_time - 1;
     if (coke_time == 0)
     {
       coke_alarm = false;
@@ -46,7 +46,7 @@ void install_alarm()
 
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   pinMode(coke_pin, OUTPUT);
   digitalWrite(coke_pin, LOW);
 

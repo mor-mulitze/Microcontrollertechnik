@@ -1,12 +1,12 @@
 const uint8_t ledPin = 13;
 const uint8_t interruptPin = 2;
-volatile bool state = true;  //volatile ist wichtig, das die Variable in der ISR geändert wird.
+volatile bool state = false;  //volatile ist wichtig, das die Variable in der ISR geändert wird.
 
 
 /** Das ist die ISR */
 void blink()
 {
-  state = digitalRead(interruptPin);
+  state = !digitalRead(interruptPin);
 }
 
 void setup()

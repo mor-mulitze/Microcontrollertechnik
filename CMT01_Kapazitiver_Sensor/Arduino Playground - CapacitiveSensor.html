@@ -1,0 +1,856 @@
+
+<!-- saved from url=(0117)http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/playground/Main/CapSense.html -->
+<html class=" js no-touch boxshadow opacity fontface svg inlinesvg svgclippaths no-ie8compat" style="" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><!-- Online page at https://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="Arduino%20Playground%20-%20CapacitiveSensor_files/hm.js.download"></script><script type="text/javascript" async="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/ga.js.download"></script><title>Arduino Playground - CapacitiveSensor</title><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_1.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_2.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_3.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_4.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_7.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_8.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_9.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_10.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_11.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_12.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_14.css" type="text/css"><link rel="stylesheet" href="Arduino%20Playground%20-%20CapacitiveSensor_files/css_58.css" type="text/css"><script type="text/javascript" async="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/ga.js.download"></script><script type="text/javascript" async="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/ga.js(1).download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_323.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_29.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_5.js.download"></script><script async="async" type="text/javascript" crossorigin="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/v1.7-152"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_6.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_7.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_8.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_24.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_35.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_324.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_325.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_10.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_11.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js_631.js.download"></script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/notice" async="" crossorigin="true" id="truste_0.18055728339024402"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-6065889-2');
+</script><script type="text/javascript" src="Arduino%20Playground%20-%20CapacitiveSensor_files/notice" async="" crossorigin="true"></script>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Donner, Bernd | Sabel</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
+<mso:Order msdt:dt="string">2700.00000000000</mso:Order>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
+<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
+<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Donner, Bernd | Sabel</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010021663F97D0AF314793FF847518F71C25</mso:ContentTypeId>
+<mso:TriggerFlowInfo msdt:dt="string"></mso:TriggerFlowInfo>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head><body style="">
+	<div id="header"><header id="ino-header">
+
+  <nav class="arduino-nav">
+
+    <!-- logo -->
+    <div class="logo">
+      <a href="https://playground.arduino.cc/" class="logo-link" role="button" aria-label="Homepage"></a>
+      <a href="https://playground.arduino.cc/" class="logo-link-resellers" role="button" aria-label="Resellers Homepage"></a>
+    </div>
+
+    <!-- main nav -->
+    <div class="main-nav" style="">
+
+      <ul class="ul-burger">
+        <li class="burger-menu">
+          <a class="burger" role="button" aria-label="Toggle Menu"><img src="Arduino%20Playground%20-%20CapacitiveSensor_files/burger_menu.svg" alt="Open Navigation"></a>
+        </li>
+      </ul>
+
+      <ul class="nav-left">
+
+        <!-- search form mobile -->
+        <li class="level-1 show-mobile search-container">
+          <a id="search-bar-mobile">
+            <form role="search" id="searchform-mobile" method="GET" action="http://www.google.com/search">
+              <input type="hidden" name="ie" value="UTF-8">
+              <input type="hidden" name="oe" value="UTF-8">
+              <input type="text" placeholder="Search" value="" name="q" title="" class="search-typing" aria-label="search">
+              <i class="clear-icon">×</i>
+              <input type="hidden" name="domains" value="https://playground.arduino.cc" class="fill-it">
+              <input type="hidden" name="sitesearch" value="https://playground.arduino.cc" class="fill-it">
+            </form>
+          </a>
+        </li>
+        <!-- search form end -->
+
+        <!-- user menu mobile -->
+        <li class="user-mobile level-1 signin-mobile">
+          <div class="login-button" style="display: block;">
+            <a href="https://auth.arduino.cc/login?client_id=playground&amp;redirect_uri=https%3A%2F%2Fplayground.arduino.cc%2F&amp;state=501945642&amp;scope=profile%3Acore+profile%3Apublic+profile%3Acontact+offline&amp;response_type=code">Sign In</a>
+          </div>
+        </li>
+        <li class="user-mobile profile-mobile level-1">
+          <div class="auth-required" style="display: none;">
+              <a href="https://id.arduino.cc/">Profile</a>
+            </div>
+        </li>
+        <li class="logout user-mobile signout-mobile level-1">
+          <div class="auth-required" style="display: none;">
+            <a>Sign Out</a>
+          </div>
+        </li>
+        <!-- user menu mobile end -->
+
+        <li class="level-1" id="home">
+          <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc.html">Home</a>
+        </li>
+
+        <li class="has-submenu level-1">
+          <a href="https://store.arduino.cc/">Store</a>
+        </li>
+
+        <li class="has-submenu level-1" id="software">
+          <a role="button">Software</a>
+          <ul class="nav-submenu">
+            <li><a href="https://create.arduino.cc/" target="_blank" rel="noopener">Online Tools</a></li>
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/Software.html">Downloads</a></li>
+          </ul>
+        </li>
+
+        <li class="level-1" id="education">
+          <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/Education.html">
+            <span class="full">Education</span>
+            <span class="shorten">Edu</span>
+          </a>
+        </li>
+
+        <li class="has-submenu level-1" id="resources">
+          <a role="button">Resources</a>
+          <ul class="nav-submenu">
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/Products.html">Products</a></li>
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Guide/HomePage.html">Getting Started</a></li>
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Tutorial/HomePage.html">Tutorials</a></li>
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/reference/en.html">Reference</a></li>
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/IoT/HomePage.html">IoT Cloud</a></li>
+          </ul>
+        </li>
+
+
+        <li class="has-submenu level-1" id="community">
+          <a role="button">Community</a>
+          <ul class="nav-submenu">
+            <li><a href="https://forum.arduino.cc/">Forum</a></li>
+            <li><a href="https://blog.arduino.cc/">Blog</a></li>
+            <li><a href="https://create.arduino.cc/projecthub" target="_blank" rel="noopener">Project Hub</a></li>
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/aug.html">Arduino User Groups</a></li>
+            <li><a href="http://playground.arduino.cc/">Playground</a></li>
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/ArduinoAtHeart/Products.html">AtHeart</a></li>
+          </ul>
+        </li>
+
+
+        <li class="has-submenu level-1" id="help">
+          <a role="button">Help</a>
+          <ul class="nav-submenu">
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/FAQ.html">FAQ</a></li>
+            <li><a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/ContactUs.html">Contact Us</a></li>
+            <li><a href="https://store.arduino.cc/store-support">Store Support</a></li>
+          </ul>
+        </li>
+
+        <!-- fake mobile button -->
+        <li class="level-1">
+          <div class="show-mobile fake-button">
+          </div>
+        </li>
+        <!-- fake mobile button end -->
+
+      </ul>
+      <!-- main nav end -->
+
+      <!-- nav right -->
+      <ul class="nav-right">
+
+        <!-- search form -->
+        <li class="level-1 header-hide-mobile">
+          <a id="search-bar">
+          <form role="search" id="searchform" method="GET" action="http://www.google.com/search">
+            <input type="hidden" name="ie" value="UTF-8">
+            <input type="hidden" name="oe" value="UTF-8">
+            <input type="text" placeholder="Search" value="" name="q" title="" class="search-typing">
+            <i class="clear-icon">×</i>
+            <input type="hidden" name="domains" value="https://playground.arduino.cc" class="fill-it">
+            <input type="hidden" name="sitesearch" value="https://playground.arduino.cc" class="fill-it">
+          </form>
+          </a>
+        </li>
+        <!-- search form end -->
+
+        <!-- language-selector -->
+        <!--<li class="language-selector has-submenu level-1">
+
+          <a><div class="selected-language eng"></div></a>
+
+          <div class="nav-submenu">
+            <div class="caret"></div>
+            <div class="dropdown-box">
+            <div class="left-col">
+              <h5>Language</h5>
+              <ul>
+              <li><button class="language-btn"><img src="https://cdn.arduino.cc/header-footer/cmvlzl4lsu/images/language_eng.svg"></button>English</li>
+              <li><button class="language-btn"><img src="https://cdn.arduino.cc/header-footer/cmvlzl4lsu/images/language_ita.svg"></button>Italian</li>
+              <li><button class="language-btn"><img src="https://cdn.arduino.cc/header-footer/cmvlzl4lsu/images/language_china.svg"></button>Chinese</li>
+              </ul>
+            </div>
+            <div class="right-col">
+              <h5>Currency</h5>
+              <ul>
+              <li><button class="currency-btn">EUR</button>Euro</li>
+              <li><button class="currency-btn">USD</button>Dollar</li>
+              <li><button class="currency-btn">GBP</button>Pound</li>
+              <li><button class="currency-btn">CHF</button>Franc</li>
+              <li><button class="currency-btn">HUF</button>Forint</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+
+        </li>-->
+        <!-- language-selector end -->
+
+        <!-- quotes start -->
+        <li class="level-1 quotes-dropdown-trigger has-submenu">
+          <a id="quotes-link">
+          <div id="quotes"><span class="badge">0</span><img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon_quotes.svg" alt="Show Quotes"></div>
+          </a>
+
+          <div class="quotes-submenu">
+          <div class="caret"></div>
+          <div class="dropdown-box">
+            <div class="cart-close-button"></div>
+            <p class="loading-content">Loading ...</p>
+
+          </div>
+          </div>
+        </li>
+        <!-- quotes end -->
+
+        <!-- cart start -->
+        <li class="level-1 cart-dropdown-trigger has-submenu">
+          <a id="cart-link">
+          <div id="cart"><span class="badge" style="display: none;">0</span><img src="Arduino%20Playground%20-%20CapacitiveSensor_files/cart.svg" alt="Show Cart"></div>
+          </a>
+
+          <div class="cart-submenu">
+          <div class="caret"></div>
+          <div class="dropdown-box">    <div class="cart-close-button"></div>
+    <div class="block block-cart">
+                <div class="block-content">
+                                        <p class="empty">You have no items in your <a href="https://store.arduino.cc/checkout/cart/">shopping cart</a>.</p>
+                                </div>
+    </div>
+</div>
+          </div>
+        </li>
+        <!-- cart end -->
+
+        <!-- geolocation button start -->
+        <li class="level-1 store-location-button has-submenu" title="Select your location">
+          <a aria-label="Change Store location">
+            <div class="store-location">
+              <img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon_geolocation.svg" alt="Store Location">
+            </div>
+          </a>
+
+          <div class="nav-submenu">
+            <div class="caret"></div>
+            <div class="dropdown-box">
+              <div class="cart-close-button"></div>
+              <p class="empty eu-africa">
+                Not shopping from Africa or Europe?
+                <a class="change-location">Change location here.</a>
+              </p>
+              <p class="empty america-asia">
+                Not shopping from America, Asia or Oceania?
+                <a class="change-location">Change location here.</a>
+              </p>
+            </div>
+          </div>
+        </li>
+        <!-- geolocation end -->
+
+        <li class="level-1">
+          <div class="login-button" style="display: block;">
+            <a href="https://auth.arduino.cc/login?client_id=playground&amp;redirect_uri=https%3A%2F%2Fplayground.arduino.cc%2F&amp;state=501945642&amp;scope=profile%3Acore+profile%3Apublic+profile%3Acontact+offline&amp;response_type=code">
+              <span>Sign In</span>
+            </a>
+          </div>
+        </li>
+
+        <li class="profile-dropdown auth-required has-submenu level-1" style="display: none;">
+          <a data-hj-suppress="" class="submenu-toggle profile" aria-label="user profile">
+            <img class="user" src="Arduino%20Playground%20-%20CapacitiveSensor_files/global_user_profile.svg" alt="User Profile">
+            <svg class="default">
+              <use xlink:href="#icon-Global-user-profile"></use>
+            </svg>
+            <span class="badge">0</span>
+          </a>
+
+          <div class="nav-submenu">
+            <div class="caret"></div>
+            <div class="dropdown-box">
+              <ul>
+                <li>
+                  <a href="https://id.arduino.cc/">Profile</a>
+                </li>
+                <li class="forum-messages">
+                  <a href="https://forum.arduino.cc/index.php?action=pm">Messages</a>
+                </li>
+                <li class="logout">
+                  <a>Sign Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </li>
+
+      </ul>
+      <!-- nav right -->
+    </div>
+  </nav>
+  <div id="consent-modal-container"><div id="privacy-and-terms-modal" class="arduino-modal info-modal" action="https://api2.arduino.cc/consent/v1/approval/byUser/me" style="display: none;">
+  <div id="privacy-and-terms-modal-backdrop" class="modal-backdrop"></div>
+  <div class="modal-body approve-privacy-policy">
+
+    <h1>OUR PRIVACY POLICY HAS BEEN UPDATED</h1><script async="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/f.txt"></script>
+<!-- cw-banner -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3968227190566015" data-ad-slot="8712418446" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <form id="terms-privacy-form" novalidate="">
+      <p>
+        We updated recently our <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/PrivacyPolicy/en.html" target="_blank" rel="noopener">Privacy policy</a>, please accept the new <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/TermsOfService.html" target="_blank" rel="noopener">Terms of service</a>.
+      </p>
+      <ul class="privacy-settings">
+        <li>
+          <div id="privacy-and-terms-consent-error" class="upper-error-notif">Please accept our privacy policy and terms to continue using our services</div>
+          <label class="checkbox">
+                <input type="checkbox" id="privacy-and-terms-consent" name="privacy-consent" value="privacy_approval">
+
+                <span class="custom-checkbox"></span>
+                <span>I confirm to have read the <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/PrivacyPolicy/en.html" target="_blank" rel="noopener">Privacy Policy</a> and to accept the <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/TermsOfService.html" target="_blank" rel="noopener">Terms of Service</a></span>
+              </label>
+        </li>
+      </ul>
+      <section class="buttons-wrapper">
+        <button name="Ok" type="submit" class="primary button" id="privacy-and-terms-ok-button">
+                <span>AGREE AND CONTINUE</span>
+              </button>
+        <p id="privacy-modal-decline-link">or <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/playground/Main/CapSense.html#">log out</a> and continue the navigation.</p>
+      </section>
+    </form>
+  </div>
+</div>
+</div>
+</header>
+</div><div id="pop-div04788958841224855" class="truste_overlay" style="background-color: rgb(0, 0, 0); opacity: 0.65; position: fixed; z-index: 1040002; width: 100%; height: 100%; top: 0px; left: 0px; overflow: hidden;"></div><div id="pop-div205515596687669326" class="truste_box_overlay" style="position: absolute; z-index: 2040002; top: 0px; left: 0px; bottom: 0px; right: 0px; border-radius: 0px; padding: 0px; background: url(&quot;https://consent.trustarc.com/get?name=trans.png&quot;); width: 80%; max-width: 840px; min-width: 220px; margin: 40px auto; box-sizing: content-box; height: 270px;"><div id="pop-div30524304562050482" class="truste_box_overlay_inner" tabindex="1" role="dialog" aria-label="Your choices regarding the use of cookies on this site" style="position: relative; width: 100%; height: 100%; outline: none;"><style>undefined</style><img src="Arduino%20Playground%20-%20CapacitiveSensor_files/get" alt="transparent background" style="display: block; width: 100%; height: 100%;"><iframe src="Arduino%20Playground%20-%20CapacitiveSensor_files/saved_resource.html" id="pop-frame023257734650158968" title="TrustArc Cookie Consent Manager" tabindex="1" scrolling="no" style="border: 0px; border-radius: 2px; overflow: hidden; background: rgb(255, 255, 255); display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
+	<div id="menuWings" class="fixed"></div>
+	<div id="page">
+        
+        <div style="margin-top: 16px;text-align: center; padding: 16px; background: #fcf6c9; font-size: 18px; line-height: 150%;">
+        Playground.arduino.cc will be read-only starting December 31st, 2018. For more info please look at this <a href="https://forum.arduino.cc/index.php?topic=580991.0" target="_blank">Forum Post</a>
+        </div>
+		<br class="clear">
+
+		<!--PageLeftFmt-->
+		<div id="pagenav">
+			<p><em>The <a class="wikilink" href="https://playground.arduino.cc/Main/HomePage">playground</a> is a publicly-editable wiki about <a class="urllink" href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc.html" rel="nofollow">Arduino</a>.</em>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/ManualsAndCurriculum">Manuals and Curriculum</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="urllink" href="http://arduino.stackexchange.com/" rel="nofollow">Arduino StackExchange</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/ArduinoCoreHardware">Board Setup and Configuration</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/DevelopmentTools">Development Tools</a>
+</p>
+<p class="vspace"></p><p class="sidehead"> <a class="wikilink" href="https://playground.arduino.cc/Main/ArduinoOnOtherAtmelChips">Arduino on other Chips</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/InterfacingWithHardware">Interfacing With Hardware</a>
+</p><ul><li><a class="wikilink" href="https://playground.arduino.cc/Main/InterfacingWithHardware#Output">Output</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/InterfacingWithHardware#InputTOC">Input</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/InterfacingWithHardware#ui">User Interface</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/InterfacingWithHardware#Storage">Storage</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/InterfacingWithHardware#Communication">Communication</a> 
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/IntWithHW-PwrSup">Power supplies</a> 
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/InterfacingWithHardware#General">General</a> 
+</li></ul><p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/InterfacingWithSoftware">Interfacing with Software</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/GeneralCodeLibrary">User Code Library</a>
+</p><ul><li><a class="wikilink" href="https://playground.arduino.cc/Main/SketchList">Snippets and Sketches</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/LibraryList">Libraries</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/TutorialList">Tutorials</a>
+</li></ul><p class="vspace"></p><p class="sidehead"><a class="urllink" href="https://github.com/arduino/arduino/issues" rel="nofollow">Suggestions &amp; Bugs</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/ElectroInfoResources">Electronics Technique</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/Resources">Sources for Electronic Parts</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/SimilarBoards">Related Hardware and Initiatives</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="urllink" href="http://playground.arduino.cc/Main/People" rel="nofollow">Arduino People/Groups &amp; Sites</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="urllink" href="http://playground.arduino.cc/Projects/ArduinoUsers" rel="nofollow">Exhibition</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="urllink" href="http://playground.arduino.cc/Projects/Ideas" rel="nofollow">Project Ideas</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="https://playground.arduino.cc/Main/Languages">Languages</a>
+</p>
+<p class="vspace"></p><hr>
+<p class="vspace"></p><p class="sidehead"> <a class="wikilink" href="https://playground.arduino.cc/Main/Participate">Participate</a>
+</p><ul><li><a class="wikilink" href="https://playground.arduino.cc/Main/Participate#contribrules">Formatting guidelines</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Site/AllRecentChanges">All recent changes</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/PmWiki/PmWiki">PmWiki</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/Main/WikiSandbox">WikiSandBox training</a>
+</li><li><a class="wikilink" href="https://playground.arduino.cc/PmWiki/BasicEditing">Basic Editing</a>
+</li><li><a class="urllink" href="http://www.pmwiki.org/wiki/PmWiki/DocumentationIndex" rel="nofollow">Documentation index</a>
+</li></ul><p class="vspace"></p>
+
+		</div>
+		<!--/PageLeftFmt-->
+
+		
+
+		<div id="pagetext" class="playground">
+				<!--PageText-->
+<script async="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/f.txt"></script>
+<!-- cw-banner -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3968227190566015" data-ad-slot="8712418446" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><div id="wikitext">
+<p><i>(redirected from 
+    <a rel="nofollow" href="https://playground.arduino.cc/Main/CapSense">Main.CapSense</a>)</i></p><p class="vspace"></p>
+<h2>Capacitive Sensing Library</h2>
+<pre> by Paul Badger
+</pre>
+<p class="vspace"></p><h3>Download</h3>
+<p>Download <a class="urllink" href="https://github.com/arduino-libraries/CapacitiveSensor/zipball/master" rel="nofollow">CapacitiveSensor04.zip</a> 
+</p>
+<p class="vspace"></p><p><a class="urllink" href="https://github.com/PaulStoffregen/CapacitiveSensor" rel="nofollow">This updated CapacitiveSensor version 05</a> adds support for Arduino Due and other non-AVR boards.
+</p>
+<p class="vspace"></p><h3>Overview</h3>
+<p>The capacitiveSensor library turns two or more Arduino pins into a  capacitive sensor, which can sense the electrical capacitance of the human body. All the sensor setup requires is a medium to high value resistor and a piece of wire and a small (to large) piece of aluminum foil on the end. At its most sensitive, the sensor will start to sense a hand or body inches away from the sensor.
+</p>
+<p class="vspace"></p><p>Version 04 adds support for Arduino 1.0, and fixes an obscure possible race condition with Tone, Servo and other libraries that perform I/O in interrupt context.
+</p>
+<p class="vspace"></p><p>Version 03 has been updated to C++ and supports multiple inputs. It also includes some utility functions to make it convenient to change timeout values.
+</p>
+<p class="vspace"></p><h3>Applications</h3>
+<p>Capacitive sensing may be used in any place where low to no force human touch sensing is desirable. An Arduino and the library may be used to sense human touch through more than a quarter of an inch of plastic, wood, ceramic or other insulating material (not any kind of metal though), enabling the sensor to be completely visually concealed.
+</p>
+<p class="vspace"></p><p>A capacitive sensor covered with paper or other insulator also acts as fairly good (human touch) pressure sensor with an approximately logarithmic response. In this regard it may surpass force sensing resistors in some applications.
+</p>
+<p class="vspace"></p><h3>How it works</h3>
+<div><img src="Arduino%20Playground%20-%20CapacitiveSensor_files/CapSense.gif" alt="" title=""></div>
+<p class="vspace"></p><p>The capacitiveSensor method toggles a microcontroller <em>send</em> pin to a new state and then waits for the <em>receive</em> pin to change to the same state as the send pin. A variable is incremented inside a <em>while</em> loop to time the receive pin's state change. The method then reports the variable's value, which is in arbitrary units.
+</p>
+<p class="vspace"></p><p><a class="urllink" href="http://www.youtube.com/watch?v=BHQPqQ_5ulc" rel="nofollow">Watch a short video demonstration</a> (<span class="wikiword">YouTube</span>)
+</p>
+<p class="vspace"></p><p>The physical setup includes a medium to high value (100 kilohm - 50 megohm) resistor between the send pin and the receive (sensor) pin. The receive pin is the sensor terminal. A wire connected to this pin with a piece of foil at the end makes a good sensor. For many applications, a more useful range of values is obtained if the sensor is covered with paper, plastic, or another insulating material, so that users do not actually touch the metal foil. Research has shown that a small capacitor (100 pF) or so from sensor pin to ground improves stability and repeatability.
+</p>
+<p class="vspace"></p><p>When the send pin changes state, it will eventually change the state of the receive pin. The delay between the send pin changing and the receive pin changing is determined by an RC time constant, defined by R * C, where R is the value of the resistor and C is the capacitance at the receive pin, plus any other capacitance (e.g. human body interaction) present at the sensor (receive) pin. Adding small capacitor (20 - 400 pF) in parallel with the body capacitance, is highly desirable too, as it stabilizes the sensed readings. 
+</p>
+<p class="vspace"></p><h3>Library Methods</h3>
+<p>The library contains three main methods and some utility methods:
+</p>
+<p class="vspace"></p><h4><span class="wikiword">CapacitiveSensor</span> <span class="wikiword">CapacitiveSensor</span>(byte sendPin, byte receivePin)</h4>
+<p><span class="wikiword">CapacitiveSensor</span> creates an instance of the library (please note the capital letters, this is not the same method as below)
+</p>
+<p class="vspace"></p><h4>long capacitiveSensorRaw(byte samples)</h4>
+<p>capacitiveSensorRaw requires one parameter, <em>samples</em>, and returns a long integer containing the absolute capacitance, in arbitrary units. The samples parameter can be used to increase the returned resolution, at the expense of slower performance. The returned value is not averaged over the number of samples, and the total value is reported.
+</p>
+<p class="vspace"></p><p>capacitiveSensorRaw will return -2 if the capacitance value exceeds the value of  CS_Timeout_Millis (in milliseconds).
+The default value for CS_Timeout_Millis 2000 milliseconds (2 seconds).
+</p>
+<p class="vspace"></p><h4>long capacitiveSensor(byte samples)</h4>
+<p>capacitiveSensor requires one parameter, samples, and returns a long containing the added (sensed) capacitance, in arbitrary units. capacitiveSensor keeps track of the lowest baseline (unsensed) capacitance, and subtracts that from the sensed capacitance, so it should report a low value in the unsensed condition. 
+</p>
+<p class="vspace"></p><p>The baseline is value is re-calibrated at intervals determined by CS_Autocal_Millis. The default value is 200000 milliseconds (20 seconds). This re-calibration may be turned off by setting CS_Autocal_Millis to a high value with the set_CS_AutocaL_Millis() method.
+</p>
+<p class="vspace"></p><h4>void set_CS_Timeout_Millis(unsigned long timeout_millis);</h4>
+<p>The set_CS_Timeout_Millis method may be used to set the CS_Timeout_Millis value, which determines how long the method will take to timeout, if the receive (sense) pin fails to toggle in the same direction as the send pin. A timeout is necessary because a <em>while</em> loop will lock-up a sketch unless a timeout is provided. CS_Timeout_Millis' default value is 2000 milliseconds (2 seconds).
+</p>
+<p class="vspace"></p><h4>void reset_CS_AutoCal()</h4>
+<p>reset_CS_AutoCal may be used to force an immediate calibration of capacitiveSensor function.
+</p>
+<p class="vspace"></p><h4>void set_CS_AutocaL_Millis(unsigned long autoCal_millis)</h4>
+<p>The method  set_CS_AutocaL_Millis(unsigned long autoCal_millis) may be used to set the timeout interval of the capacitiveSensor function. Re-calibration may be turned off by using  set_CS_AutocaL_Millis to set CS_AutocaL_Millis to "0xFFFFFFFF".
+</p>
+<p class="vspace"></p><h3>Resistor Choice</h3>
+<p>Here are some guidelines for resistors but be sure to experiment for a desired response.
+</p>
+<p class="vspace"></p><ul><li>Use a 1 megohm resistor (or less maybe) for absolute touch to activate.
+</li><li>With a 10 megohm resistor the sensor will start to respond 4-6 inches away.
+</li><li>With a 40 megohm resistor the sensor will start to respond 12-24 inches away (dependent on the foil size). Common resistor sizes usually end at 10 megohm so you may have to solder four 10 megohm resistors end to end.
+<p class="vspace"></p></li><li>One tradeoff with larger resistors is that the sensor's increased sensitivity means that it is slower. Also if the sensor is exposed metal, it is possible that the send pin will never be able to force a change in the receive (sensor) pin, and the sensor will timeout.
+<p class="vspace"></p></li><li>Also experiment with small capacitors (100 pF - .01 uF) to ground, on the sense pin. They improve stability of the sensor. 
+</li></ul><p class="vspace"></p><p>Note that the hardware can be set up with one sPin and several resistors and rPin's for calls to various capacitive sensors. See the example sketch.
+</p>
+<p class="vspace"></p><h3>Grounding and other known issues</h3>
+<p>The grounding of the Arduino board is very important in capacitive sensing. The board needs to have some connection to ground, even if this is not a low-impedance path such as a wire attached to a water pipe.
+</p>
+<p class="vspace"></p><p>Capacitive sensing has some quirks with laptops unconnected to mains power. The laptop itself tends to become sensitive and bringing a hand near the laptop will change the returned values. 
+</p>
+<p class="vspace"></p><p>Connecting the charging cord to the laptop will usually be enough to get things working correctly. Connecting the Arduino ground to an earth ground (for example, a water pipe) could be another solution.
+</p>
+<p class="vspace"></p><p>Another solution that seems to have worked well on at least one installation, is to run a foil ground plane under the sensor foil (insulated by plastic, paper, etc.), and connected by a wire to ground. This worked really well to stabilize sensor values and also seemed to dramatically increase sensor sensitivity.
+</p>
+<p class="vspace"></p><h3>Scroll Wheels (well, slide pots anyway)</h3>
+<p>Experiments with a slide pot type linear sensor have been successful with just two pins and a resistance ladder. The basic layout is shown in the Quantum Scrollwheel sensor datasheet.
+</p>
+<p class="vspace"></p><p>The code uses this type of arrangement
+</p><pre>CapacitiveSensor Left32  = CapacitiveSensor(3, 2); // wire from pin 2 to left side of resistor ladder\
+CapacitiveSensor Right23 = CapacitiveSensor(2, 3); // wire from pin 3 to right side of resistor ladder
+</pre>
+<p class="vspace"></p><p>Where the pins switch their send and receive positions. With a linear resistance ladder, a finger closer to the send pin will report lower values because resistance downstream from the capacitance is basically out of the circuit.
+</p>
+<p class="vspace"></p><p>So in this manner when a finger is moved from one pin to the other the two calls to capacitiveSensorRaw will report complementary  values that have an approximately constant value to them. The complication comes in when trying to deal with how much contact (capacitance) is present, which raises (or lowers) both values, but not necessarily in a linear manner.
+</p>
+<p class="vspace"></p><p>At some point I'll get the sketch posted here.
+</p>
+<p class="vspace"></p><h3>Error Messages</h3>
+<p>capacitiveSensor and capacitiveSensorRaw will return -1 with an invalid choice of pin parameter, but it appears that this feature is not working at this writing. Engineers are working on this, stand by...
+</p>
+<p class="vspace"></p><p>capacitiveSensor and capacitiveSensorRaw will return -2 if the methods timeout. This is caused by the count exceeding the value of CS_Timeout_Millis, which is set at a default value of 2000 milliseconds (2 seconds). This is most often caused by a missing resistor or the resistor in the wrong pin. It could also be caused by a sensor that is grounded or connected to +5 V. 
+</p>
+<p class="vspace"></p><p>A timeout is necessary because the <em>while</em> loop that does the timing in the <span class="wikiword">CapacitiveSensor</span> method, will lock-up the sketch (the function will never return) if, for example, the resistor between sendPin and receivePin becomes disconnected.
+</p>
+<p class="vspace"></p><h4>Installation</h4>
+<ul><li>Download <a class="urllink" href="https://github.com/arduino-libraries/CapacitiveSensor/zipball/master" rel="nofollow">CapacitiveSensor04.zip</a> 
+</li><li>Unzip, and add to Arduino/hardware/libraries/
+</li><li>To add capacitiveSensor to a new sketch choose Sketch-&gt;Import Library-&gt;<span class="wikiword">CapacitiveSensor</span>
+</li></ul><p class="vspace"></p><h4>Demo Sketch</h4>
+<pre>#include &lt;CapacitiveSensor.h&gt;
+
+/*
+ * CapitiveSense Library Demo Sketch
+ * Paul Badger 2008
+ * Uses a high value resistor e.g. 10 megohm between send pin and receive pin
+ * Resistor effects sensitivity, experiment with values, 50 kilohm - 50 megohm. Larger resistor values yield larger sensor values.
+ * Receive pin is the sensor pin - try different amounts of foil/metal on this pin
+ * Best results are obtained if sensor foil and wire is covered with an insulator such as paper or plastic sheet
+ */
+
+
+CapacitiveSensor   cs_4_2 = CapacitiveSensor(4,2);        // 10 megohm resistor between pins 4 &amp; 2, pin 2 is sensor pin, add wire, foil
+CapacitiveSensor   cs_4_5 = CapacitiveSensor(4,5);        // 10 megohm resistor between pins 4 &amp; 6, pin 6 is sensor pin, add wire, foil
+CapacitiveSensor   cs_4_8 = CapacitiveSensor(4,8);        // 10 megohm resistor between pins 4 &amp; 8, pin 8 is sensor pin, add wire, foil
+
+void setup()                    
+{
+
+   cs_4_2.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
+   Serial.begin(9600);
+
+}
+
+void loop()                    
+{
+    long start = millis();
+    long total1 =  cs_4_2.capacitiveSensor(30);
+    long total2 =  cs_4_5.capacitiveSensor(30);
+    long total3 =  cs_4_8.capacitiveSensor(30);
+
+    Serial.print(millis() - start);        // check on performance in milliseconds
+    Serial.print("\t");                    // tab character for debug window spacing
+
+    Serial.print(total1);                  // print sensor output 1
+    Serial.print("\t");
+    Serial.print(total2);                  // print sensor output 2
+    Serial.print("\t");
+    Serial.println(total3);                // print sensor output 3
+
+    delay(10);                             // arbitrary delay to limit data to serial port 
+}
+
+
+</pre>
+<p class="vspace"></p><h3>Example code: Threshold</h3>
+<p>Instead of using capacitors, you may use a function to count relevant values, and reset the count when encountering lower values (interferences). This is a code example for a touch lamp. It require to either touch the pin 8 wire or to get close to an antenna, and it stops the readings when the threshold is reached. You might want to adjust values A, B and C according to your particular project.
+</p>
+<p class="vspace"></p><pre>#include &lt;CapacitiveSensor.h&gt;
+CapacitiveSensor cs_7_8 = CapacitiveSensor(7,8); //10M Resistor between pins 7 and 8, you may also connect an antenna on pin 8
+unsigned long csSum;
+
+void setup() {
+    Serial.begin(9600);
+}
+
+void loop() {
+    CSread();
+}
+
+void CSread() {
+    long cs = cs_7_8.capacitiveSensor(80); //a: Sensor resolution is set to 80
+	if (cs &gt; 100) { //b: Arbitrary number
+		csSum += cs;
+		Serial.println(cs); 
+		if (csSum &gt;= 3800) //c: This value is the threshold, a High value means it takes longer to trigger
+		{
+			Serial.print("Trigger: ");
+			Serial.println(csSum);
+			if (csSum &gt; 0) { csSum = 0; } //Reset
+			cs_7_8.reset_CS_AutoCal(); //Stops readings
+		}
+	} else {
+		csSum = 0; //Timeout caused by bad readings
+	}
+}
+
+</pre>
+<p class="vspace"></p><h4>Bugs, suggestions, applications</h4>
+<p>Please post bugs, suggestions, amazing feats on this <a class="urllink" href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/cgi-bin/yabb2/YaBB.pl.html" rel="nofollow">forum thread</a>
+</p>
+<p class="vspace"></p><p><a class="urllink" href="http://arduino.cc/en/Reference/Libraries" rel="nofollow">Reference/Libraries</a>
+</p>
+</div>
+
+
+				
+			</div> <!-- eof pagetext -->
+		
+		<br class="clear">
+		
+	</div> <!-- eof page -->
+		
+	
+	<script src="Arduino%20Playground%20-%20CapacitiveSensor_files/jquery-1.10.2.min.js.download"></script>
+	<script src="Arduino%20Playground%20-%20CapacitiveSensor_files/foundation.min.js.download"></script>
+	<script>
+	  $(document).foundation();
+	</script>
+	<!--<![endif]-->
+	<!--[if IE 8]>
+	<script src="//content.arduino.cc/legacy/js/foundation_ie8.min.js"></script>
+	<script src="//content.arduino.cc/legacy/js/ie8/jquery.foundation.alerts.js"></script>
+	<script src="//content.arduino.cc/legacy/js/app.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-22581631-3']);
+	  _gaq.push(['_setDomainName', 'arduino.cc']);
+	  _gaq.push(['_trackPageview']);
+	
+	    (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+    <div>
+      <div id="newsletter-modal"><div id="newsletter-popup-privacy" class="arduino-modal info-modal" action="https://api2.arduino.cc/consent/v1/subscription" style="display: none;">
+  <!-- Step 1.5, approve the privacy policy -->
+  <div id="privacy-modal-backdrop" class="modal-backdrop"></div>
+  <div class="modal-body approve-privacy-policy">
+
+    <h1>Privacy consent</h1>
+
+    <div>
+      <p>
+        Arduino cares about the privacy and personal data of its users. The <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/PrivacyPolicy.html" target="_blank" rel="noopener">privacy policy</a> is meant to inform you on how we process your personal data when you use our services.
+      </p>
+
+      <ul class="privacy-settings">
+        <li>
+          <div id="privacy-consent-error" class="upper-error-notif">Please confirm that you have read the privacy policy</div>
+          <label class="checkbox">
+            <input type="checkbox" id="privacy-consent" name="privacy-consent" value="privacy_approval">
+
+            <span class="custom-checkbox"></span>
+            <span>I confirm to have read the privacy policy<span class="required-asterisk">*</span></span>
+          </label>
+        </li>
+        <li>
+          <div id="newsletter-error" class="upper-error-notif">Please confirm your consent to receive the newsletter</div>
+          <label class="checkbox">
+            <input type="checkbox" id="newsletter-consent" name="newsletter-consent" value="newsletter_approval" checked="">
+
+            <span class="custom-checkbox"></span>
+            <span>I confirm my consent to receive your newsletter<span class="required-asterisk">*</span></span>
+          </label>
+        </li>
+        <li>
+          <label class="checkbox">
+            <input type="checkbox" id="marketing-consent" value="marketing_approval">
+            <span class="custom-checkbox"></span>
+            <span>I confirm my consent to the processing of my personal data for marketing purposes, consisting in commercial offers sent via email</span>
+          </label>
+        </li>
+        <li>
+          <label class="checkbox">
+            <input type="checkbox" id="tracking-consent" value="tracking_approval">
+            <span class="custom-checkbox"></span>
+            <span>I confirm my consent to automated processing of my personal data, by means of profiling, in order to receive commercial offers customized on the basis of my browsing and purchasing behavior</span>
+          </label>
+        </li>
+      </ul>
+      <div class="my-error-notification">
+        <div id="newsletterSubscribeStatus"></div>
+      </div>
+      <section class="buttons-wrapper">
+        <button name="Cancel" class="button secondary" id="newsletter-privacy-policy-cancel-button">Cancel</button>
+        <button name="Ok" class="primary button" id="newsletter-privacy-policy-ok-button">Ok</button>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- step 2, confirm popup -->
+<div id="newsletter-popup-confirm" class="arduino-modal info-modal" style="display: none;">
+     <div class="modal-backdrop"></div>
+  <div id="confirm-newsletter-modal-backdrop" class="modal-body confirm-email">
+    <h1>Confirm your email address</h1>
+    <div id="newsletterModalBody">
+      <p>
+        We need to confirm your email address.<br> To complete the subscription, please click the link in the email we just sent you.
+      </p>
+      <p>
+        Thank you for subscribing!
+      </p>
+      <section class="buttons-wrapper">
+        <button name="Ok" class="button" id="confirm-email-ok-button">Ok</button>
+      </section>
+    </div>
+  </div>
+</div>
+</div>
+      <div id="footer"><div id="footer-block" style="">
+  <div class="newsletter-form">
+    <h4 id="newsletter-input-label">Newsletter</h4>
+    <div class="subscribe-wrapper">
+      <div id="newsletter-email-error" class="upper-error-notif">Please insert a valid email</div>
+      <div class="input-wrapper">
+        <input id="newsletter-email" aria-labelledby="newsletter-input-label" type="email" name="email" class="email" placeholder="Enter your email to sign up">
+        <button id="subscribe-btn" aria-label="Subscribe" class="button">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <section class="footer-links-wrapper">
+    <ul id="footer-list">
+      <li>
+        <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/TermsOfService.html">
+          <span class="text">Terms Of Service</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/PrivacyPolicy.html">
+          <span class="text">Privacy Policy</span>
+        </a>
+      </li>
+      <li>
+        <div id="teconsent" consent="undefined" style="display: block;" aria-label="Open Cookie Preferences Modal">
+        <a id="icon-id0013884500806547795" tabindex="0" role="button" lang="en" style="cursor: pointer;">Change Cookie Preferences</a><script async="async" type="text/javascript" crossorigin="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/v1.7-152"></script><a id="icon-id03476969237924403" tabindex="0" role="button" lang="en" style="cursor: pointer;">Change Cookie Preferences</a></div>
+      </li>
+      <li>
+        <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/ContactUs.html">
+          <span class="text">Contact Us</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/AboutUs.html">
+          <span class="text">About Us</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://store.arduino.cc/distributors">
+          <span class="text">Distributors</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/Careers.html">
+          <span class="text">Careers</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/Security.html">
+          <span class="text">Security</span>
+        </a>
+      </li>
+    </ul><!-- footer-list -->
+    <div class="footer-note">
+      <p>
+        <a href="http://man.hubwiz.com/docset/Arduino.docset/Contents/Resources/Documents/www.arduino.cc/en/Main/CopyrightNotice.html">
+          <span class="text">
+            © <span id="current-year">2019</span> Arduino
+          </span>
+        </a>
+      </p>
+    </div>
+  </section>
+  <ul class="social-btn-list">
+    <li>
+      <a href="https://www.facebook.com/official.arduino" target="_blank" id="facebook" class="facebook" rel="noopener">
+        <img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon-facebook.svg" alt="facebook">
+        <p class="follow-us">follow us on Facebook</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/arduino" target="_blank" id="twitter" class="twitter" rel="noopener">
+        <img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon-twitter.svg" alt="twitter">
+        <p class="follow-us">follow us on Twitter</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/+Arduino" target="_blank" id="gplus" class="gplus" rel="noopener">
+        <img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon-gplus.svg" alt="google plus">
+        <p class="follow-us">follow us on Google+</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/arduino.cc/" target="_blank" id="instagram" class="instagram" rel="noopener">
+        <img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon-instagram.svg" alt="instagram">
+        <p class="follow-us">follow us on Instagram</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/arduino/" target="_blank" id="github" class="github" rel="noopener">
+        <img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon-github.svg" alt="github">
+        <p class="follow-us">Arduino on GitHub</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.flickr.com/photos/arduino_cc" target="_blank" id="flickr" class="flickr" rel="noopener">
+        <img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon-flickr.svg" alt="flickr">
+        <p class="follow-us">follow us on Flickr</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/user/arduinoteam" target="_blank" id="youtube" class="youtube" rel="noopener">
+        <img src="Arduino%20Playground%20-%20CapacitiveSensor_files/icon-youtube.svg" alt="youtube">
+        <p class="follow-us">follow us on YouTube</p>
+      </a>
+    </li>
+  </ul>
+
+  <button id="go-top" class="go-top-footer-btn" aria-label="Scroll Top">
+    <span class="arrow-1"></span>
+    <span class="arrow-2"></span>
+    <span class="arrow-3"></span>
+  </button>
+</div><!-- footer-block -->
+</div>
+    </div>
+    <script src="Arduino%20Playground%20-%20CapacitiveSensor_files/loader.js.download" type="text/javascript"></script>
+    <script>
+      var auth = {
+        token: function() {
+          return false ? Promise.resolve({
+            token: null          }) : Promise.reject('loggedout')
+        },
+        redirectURI: function() {
+          return 'https://auth.arduino.cc/login?client_id=playground&redirect_uri=https%3A%2F%2Fplayground.arduino.cc%2F&state=501945642&scope=profile%3Acore+profile%3Apublic+profile%3Acontact+offline&response_type=code';
+        }
+      };
+      ArduinoHeaderAndFooter({
+        auth: "custom",
+        authOptions: auth
+      });
+    </script>
+
+
+<div id="pop-div035924639138897496" class="truste_overlay" style="background-color: rgb(0, 0, 0); opacity: 0.65; position: fixed; z-index: 1000198; width: 100%; height: 100%; top: 0px; left: 0px; overflow: hidden;"></div><div id="pop-div206860190691378463" class="truste_box_overlay" style="position: absolute; z-index: 2000198; top: 0px; left: 0px; bottom: 0px; right: 0px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; padding: 0px; background-image: url(&quot;https://consent.trustarc.com/get?name=trans.png&quot;); width: 80%; max-width: 840px; min-width: 220px; margin: 40px auto; box-sizing: content-box; height: 270px; background-position: initial initial; background-repeat: initial initial;"><div id="pop-div309754669178901062" class="truste_box_overlay_inner" tabindex="1" role="dialog" aria-label="Your choices regarding the use of cookies on this site" style="position: relative; width: 100%; height: 100%; outline: none;"><img src="Arduino%20Playground%20-%20CapacitiveSensor_files/get" alt="transparent background" style="display: block; width: 100%; height: 100%;"></div></div><script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?f1ba5b4a33d29d84db69f029b9ace483";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script><script data-ad-client="ca-pub-3968227190566015" async="" src="Arduino%20Playground%20-%20CapacitiveSensor_files/f(1).txt"></script><div id="pop-div002123172804489659" class="truste_overlay" style="background-color: rgb(0, 0, 0); opacity: 0.65; position: fixed; z-index: 1000000; width: 100%; height: 100%; top: 0px; left: 0px; overflow: hidden;"></div><div id="pop-div20594961836319202" class="truste_box_overlay" style="position: absolute; z-index: 2000000; top: 0px; left: 0px; bottom: 0px; right: 0px; border-radius: 0px; padding: 0px; background: url(&quot;https://consent.trustarc.com/get?name=trans.png&quot;); width: 80%; max-width: 840px; min-width: 220px; margin: 40px auto; box-sizing: content-box; height: 270px;"><div id="pop-div3013026317789758735" class="truste_box_overlay_inner" tabindex="1" role="dialog" aria-label="Your choices regarding the use of cookies on this site" style="position: relative; width: 100%; height: 100%; outline: none;"><img src="Arduino%20Playground%20-%20CapacitiveSensor_files/get" alt="transparent background" style="display: block; width: 100%; height: 100%;"><iframe src="Arduino%20Playground%20-%20CapacitiveSensor_files/saved_resource(1).html" id="pop-frame019811207597493175" title="TrustArc Cookie Consent Manager" tabindex="1" scrolling="no" style="border: 0px; border-radius: 2px; overflow: hidden; background: rgb(255, 255, 255); display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div></body></html>
