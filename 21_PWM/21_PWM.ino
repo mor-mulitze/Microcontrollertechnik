@@ -5,7 +5,7 @@ void setup() {
   //Wir machen unseren Atmega328p langsam
   cli();
   CLKPR = 1 << CLKPCE; //jetzt darf der Takt geändert werden 
-//  CLKPR = 1 << CLKPS3; //62.5kHz Taktfrequenz
+  CLKPR = 1 << CLKPS3; //62.5kHz Taktfrequenz
   CLKPR = 0; //16MHz Taktfrequenz
   sei();
 
