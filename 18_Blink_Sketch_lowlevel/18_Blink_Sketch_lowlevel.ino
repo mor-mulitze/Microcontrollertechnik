@@ -1,5 +1,5 @@
 ISR(TIMER2_OVF_vect) {
-  PORTB ^= (1 << PB5);  // toggle PD7
+  PORTB ^= (1 << PB5);  // toggle PB5
 }
 
 void setup() {

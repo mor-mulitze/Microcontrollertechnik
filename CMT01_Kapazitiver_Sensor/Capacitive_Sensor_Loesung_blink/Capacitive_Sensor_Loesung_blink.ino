@@ -22,6 +22,7 @@ void loop()
     digitalWrite(ledPinBlue, LOW);   // sets the LED off
   } else if (val >= 1000)
   {
-    digitalWrite(ledPinBlue, HIGH);   // sets the LED on
+    digitalWrite(ledPinBlue, !digitalRead(ledPinBlue));
+    delay(1000);
   }
 }
