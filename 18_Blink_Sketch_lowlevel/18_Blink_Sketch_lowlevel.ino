@@ -1,5 +1,6 @@
 ISR(TIMER2_OVF_vect) {
   PORTB ^= (1 << PB5);  // toggle PB5
+  TCNT2 = 128;
 }
 
 void setup() {
