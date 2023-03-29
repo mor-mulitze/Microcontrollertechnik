@@ -22,7 +22,7 @@ void loop()
     digitalWrite(ledPinBlue, LOW);   // sets the LED off
     anwesend = false;
   }
-  if (anwesend == false) && (val >= 1000)
+  if ((anwesend == false) && (val >= 1000))
   {
     digitalWrite(ledPinBlue, HIGH);
     anwesend = true;
