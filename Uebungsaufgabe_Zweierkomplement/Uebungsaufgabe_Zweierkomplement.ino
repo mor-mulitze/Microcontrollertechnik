@@ -2,7 +2,7 @@ void setup() {
   Serial.begin(9600);
   for (int8_t i = 1; i < 148; i++)
   {
-    Serial.println("Hi ich bin der Größte!!!");
+    Serial.println(i);
   }
   // put your setup code here, to run once:
 
