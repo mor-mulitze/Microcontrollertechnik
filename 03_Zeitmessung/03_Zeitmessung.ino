@@ -33,15 +33,12 @@
 //#pragma GCC push_options
 //#pragma GCC optimize ("-O0")
 
-typedef unsigned char integer_to_test;
-
 void setup()
 {
   Serial.begin(9600);
-  volatile integer_to_test a = 0x7;
-  volatile integer_to_test b = 0xff;
+  volatile int8_t a = 20;
   
-  unsigned int cycles = 0;
+  uint16_t cycles = 0;
 
   MEASURE_START
   
