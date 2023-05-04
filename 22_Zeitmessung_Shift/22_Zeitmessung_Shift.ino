@@ -32,7 +32,7 @@
 #define DIVISION(i) \
   { \
     randomSeed(analogRead(0)); \
-    register int8_t a = random(30); \
+    volatile int8_t a = random(30); \
     uint16_t cycles = 0; \
     MEASURE_START \
     a = a / i; \
@@ -48,7 +48,7 @@
 #define SHIFT(i) \
   { \
     randomSeed(analogRead(0)); \
-    register int8_t a = random(30); \
+    volatile int8_t a = random(30); \
     uint16_t cycles = 0; \
     MEASURE_START \
     a = a >> i; \

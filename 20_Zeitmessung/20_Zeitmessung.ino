@@ -42,7 +42,7 @@ void setup()
 
   MEASURE_START
   
-  b = b + a + a;
+  a=a/5;
   
   MEASURE_STOP(cycles, 1)
 
