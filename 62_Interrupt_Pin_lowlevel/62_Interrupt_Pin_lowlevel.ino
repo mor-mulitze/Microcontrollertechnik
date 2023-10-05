@@ -22,6 +22,9 @@ void setup()
   sei();
 }
 
+
+printf("%.5f\n", x);
+
 void loop()
 {
   digitalWrite(ledPin, state);
