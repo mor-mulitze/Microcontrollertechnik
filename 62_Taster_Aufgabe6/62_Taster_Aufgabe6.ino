@@ -1,10 +1,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-const uint8_t ledPin = 8;
-const uint8_t interruptPin0 = 2;
-const uint8_t interruptPin1 = 3;
-const uint32_t deadTime = 10000;
+const uint32_t deadTime = 100000;
 volatile bool state = false;
 volatile uint32_t time = micros();
 

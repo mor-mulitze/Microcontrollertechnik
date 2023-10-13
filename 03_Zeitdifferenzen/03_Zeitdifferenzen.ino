@@ -1,6 +1,6 @@
 const uint8_t led = 13;
-const uint8_t intervall = 100;
-uint8_t       startZeit = millis();
+const uint32_t intervall = 100;
+uint32_t       startZeit = millis();
 
 void setup()
 {
@@ -11,13 +11,13 @@ void setup()
 
 void loop()
 {
-  uint8_t aktuelleZeit = millis();
+  uint32_t aktuelleZeit = millis();
 
   Serial.print(startZeit);
   Serial.print("\t\t");
   Serial.println(aktuelleZeit);
 
-  if ((uint8_t)(aktuelleZeit - startZeit) >= intervall )
+  if ((uint32_t)(aktuelleZeit - startZeit) >= intervall )
   {
     digitalWrite(led, !digitalRead(led));
     startZeit = aktuelleZeit;
