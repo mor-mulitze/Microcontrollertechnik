@@ -23,8 +23,7 @@ void setup() {
   Serial.println((uint16_t) &b);
   Serial.println((uint16_t) &c);
   Serial.println((uint16_t) &d);
-  Serial.println(*p);
-  
+  Serial.println(*p);  
 }
 
 void loop() {
