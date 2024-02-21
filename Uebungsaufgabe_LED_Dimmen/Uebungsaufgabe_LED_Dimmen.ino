@@ -1,12 +1,12 @@
 /**
  Eigentlich 257 Zeitscheiben aber mit
- COM2B1 = 1; COM2B0 = 0; können nur 1-257 Zeitscheiben gesteuert werden
- COM2B1 = 1; COM2B0 = 1; können nur 0-256 Zeitscheiben gesteuert werden
+ COM2B1 = 1; COM2B0 = 0; können nur 1-256 Zeitscheiben gesteuert werden
+ COM2B1 = 1; COM2B0 = 1; können nur 0-255 Zeitscheiben gesteuert werden
 
  Deshalb ist OCR2B = 64 nicht genau 25% Duty-Cycle sondern:
- (64+1)/257 = 25.2918%
- mit OCR2B = 63 wären wir etwas näher an den 25%:
- (63+1)/257 = 24.9027%
+ (64+1)/257 = 25.29182879%
+ mit OCR2B = 63 wären wir besser an den 25%:
+ (63+1)/257 = 24.90272374%
 */
 
 
