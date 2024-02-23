@@ -14,10 +14,20 @@ void setup()
 {
   Serial.begin(9600);
   pinMode(3, OUTPUT);
+  const uint16_t x = 64; //x = 0...256
   cli();
-  TCCR2A = (1 << COM2B1) | (1 << WGM21) | (1 << WGM20);    // <------- Mode: Fast PWM Mode 3; Ausgabe auf OC2B-Pin 
-  TCCR2B = (1 <<   CS22) | (1 <<  CS21) | (1 <<  CS20);    // <------- Prescaler: 1024
-  OCR2B = 64;                                              //OCR2B = 0.25*256 = 64
+  if (x < 128)
+  {
+    //inverting mode: gut für dunkel
+    TCCR2A = (1 << COM2B1) | (1 << COM2B0) | (1 << WGM21) | (1 << WGM20);    // <------- Mode: Fast PWM Mode 3; Ausgabe auf OC2B-Pin 
+    TCCR2B = (1 <<   CS22) | (1 <<   CS21) | (1 <<  CS20);                   // <------- Prescaler: 1024
+    OCR2B = 255 - x;                                                              //OCR2B = 0.25*256 = 64
+  } else {
+    //non-inverting mode: gut für hell
+    TCCR2A = (1 << COM2B1) | (1 << WGM21) | (1 << WGM20);    // <------- Mode: Fast PWM Mode 3; Ausgabe auf OC2B-Pin 
+    TCCR2B = (1 <<   CS22) | (1 <<  CS21) | (1 <<  CS20);                   // <------- Prescaler: 1024
+    OCR2B = x-1;
+  }                                                              //OCR2B = 0.25*256 = 64
 
   sei();
 
