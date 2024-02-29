@@ -13,10 +13,8 @@ void setup()
 
 void loop()
 {
-  SPI.transfer(highByte(x));
-  myArray[0] = SPDR;
-  SPI.transfer(lowByte(x));
-  myArray[1] = SPDR;
+  myArray[0] = SPI.transfer(highByte(x));
+  myArray[1] = SPI.transfer(lowByte(x));
 
   Serial.print("Master:  Slave schickte mir: 0x");
   Serial.print(myArray[0], HEX);
