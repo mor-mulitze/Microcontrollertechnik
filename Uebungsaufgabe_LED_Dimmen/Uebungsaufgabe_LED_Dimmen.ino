@@ -9,13 +9,19 @@
  (63+1)/257 = 24.90272374%
 */
 
+#define __ASSERT_USE_STDERR
+#include <assert.h>
 
 void setup()
 {
   Serial.begin(9600);
+
+  const uint16_t x = 257; //0...256
+  assert(x < 257);
   pinMode(3, OUTPUT);
   const uint16_t x = 64; //x = 0...256
   cli();
+<<<<<<< Updated upstream
   if (x < 128)
   {
     //inverting mode: gut für dunkel
@@ -28,6 +34,20 @@ void setup()
     TCCR2B = (1 <<   CS22) | (1 <<  CS21) | (1 <<  CS20);                   // <------- Prescaler: 1024
     OCR2B = x-1;
   }                                                              //OCR2B = 0.25*256 = 64
+=======
+  if (x < 128) {
+  // 0 - 127 Zeitscheiben inverting mode
+    TCCR2A = (1 << COM2B1) | (1 << COM2B0) | (1 << WGM21) | (1 << WGM20);    // <------- Mode: Fast PWM Mode 3; Ausgabe auf OC2B-Pin 
+    TCCR2B = (1 <<   CS22) | (1 <<   CS21) | (1 <<  CS20);                   // <------- Prescaler: 1024
+    OCR2B = 255-x;                                                           //OCR2B = 0.25*256 = 64
+  } else {
+    // 128 - 257 Zeitscheiben non-inverting mode
+    TCCR2A = (1 << COM2B1) | (1 << WGM21) | (1 << WGM20);     // <------- Mode: Fast PWM Mode 3; Ausgabe auf OC2B-Pin 
+    TCCR2B = (1 <<   CS22) | (1 <<   CS21) | (1 <<  CS20);    // <------- Prescaler: 1024
+    OCR2B = x-1;                                              //OCR2B = 0.25*256 = 64
+
+  }
+>>>>>>> Stashed changes
 
   sei();
 
@@ -37,6 +57,21 @@ void setup()
 */
 }
 
+
 void loop()
 {
+}
+
+
+// handle diagnostic informations given by assertion and abort program execution:
+void __assert(const char *__func, const char *__file, int __lineno, const char *__sexp) {
+    // transmit diagnostic informations through serial link.
+    Serial.println("Assert failed in:"); 
+    Serial.println(__func);
+    Serial.println(__file);
+    Serial.println(__lineno, DEC);
+    Serial.println(__sexp);
+    Serial.flush();
+    // abort program execution.
+    abort();
 }
