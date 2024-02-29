@@ -1,4 +1,4 @@
-#include<SPI.h>
+#include <SPI.h>
 
 unsigned short x = 0x1234;
 byte myArray[2];
@@ -18,9 +18,9 @@ void loop()
   SPI.transfer(lowByte(x));
   myArray[1] = SPDR;
 
-  Serial.print("Master:  Slave schickte mir: ");
+  Serial.print("Master:  Slave schickte mir: 0x");
   Serial.print(myArray[0], HEX);
-  Serial.print(" und ");
+  Serial.print(" und 0x");
   Serial.println(myArray[1], HEX);
 
   //-----------------------
