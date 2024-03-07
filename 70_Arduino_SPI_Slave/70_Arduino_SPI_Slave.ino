@@ -1,17 +1,20 @@
 #include <SPI.h>
+#include <avr/power.h>
 
-volatile int i = 0;
-byte myArray[2];
+volatile uint8_t i = 0;
+uint8_t myArray[2];
 
 void setup()
 {
   Serial.begin(9600);
-  pinMode(SS, INPUT_PULLUP);
+//  SPI.setDataMode(SPI_MODE3);
+  pinMode(SS,   INPUT);
   pinMode(MOSI, INPUT);
   pinMode(MISO, OUTPUT);
-  pinMode(SCK, INPUT);
-  SPCR |= _BV(SPE);
+  pinMode(SCK,  INPUT);
+  SPCR |= (1 << SPE);
   SPI.attachInterrupt();  //allows SPI interrupt
+  power_timer0_disable(); //keine Interrupts, sonst gibt es teilweise Übertragungsfehler
 }
 
 void loop(void)

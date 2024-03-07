@@ -1,3 +1,5 @@
+#include <avr/power.h>
+
 void setup()
 {
   Serial.begin(9600);
@@ -5,7 +7,7 @@ void setup()
   DDRB = (1<<PB4);
   // SPI freigeben
   SPCR = (1<<SPE);
- 
+  power_timer0_disable(); //keine Interrupts, sonst gibt es teilweise Übertragungsfehler 
 }
 
 void loop()
