@@ -1,13 +1,13 @@
 const uint8_t interruptPin = 3;
 const uint8_t ledPin = 13;
-const unsigned long totzeit = 100; //0.1 Sekunden
-volatile unsigned long lastedge = 0;
 
 //#define DEBUG
 
 ISR(INT1_vect)
 {
-  unsigned long now = millis();
+  const uint32_t totzeit = 100; //0.1 Sekunden
+  uint32_t now = millis();
+  static uint32_t lastedge = 0;
 
 #ifdef DEBUG
   static uint8_t anschlag = 0;
