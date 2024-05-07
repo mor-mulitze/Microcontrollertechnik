@@ -7,13 +7,16 @@
  * 4. Was ist das maximale Rauschen (Spannungsdifferenz) im Pegelzustand HIGH, bzw das Rauschen im Pegelzusand LOW.
  */
 
+#include <Arduino.h>
+
 void setup() {
   DDRD = 0xFF;
-  cli();
 }
 
 
 void loop() {
   PORTD |= (1 << PD3);
+  delay(500);
   PORTD &= ~(1 << PD3);
+  delay(500);
 }
