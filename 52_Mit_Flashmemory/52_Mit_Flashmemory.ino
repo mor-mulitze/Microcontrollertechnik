@@ -275,7 +275,7 @@ void setup()
 
   for (uint16_t k = 0; k < sizeof(font)/FONT_BREITE; ++k)
   {
-    for (uint8_t i = 0; i < FONT_BREITE; ++i) zeichen[i] = pgm_read_byte(font + k*FONT_BREITE + i); //<---------------------   displayInt = charSet[j]; <-----> displayInt = pgm_read_word(charSet + j);
+    for (uint8_t i = 0; i < FONT_BREITE; ++i) zeichen[i] = pgm_read_byte(font + k*FONT_BREITE + i); //font[k*FONT_BREITE + i]    <---------------------   displayInt = charSet[j]; <-----> displayInt = pgm_read_word(charSet + j);
 
     Serial.print(k);
     Serial.println(F(".tes Zeichen:"));

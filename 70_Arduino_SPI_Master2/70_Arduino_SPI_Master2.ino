@@ -8,18 +8,20 @@ uint8_t slaveSelectPin = 9;
 void setup()
 {
   pinMode(slaveSelectPin, OUTPUT);
+  digitalWrite(slaveSelectPin, HIGH);   //Slave is selected
   Serial.begin(9600);
   SPI.begin();
   SPI.setClockDivider(SPI_CLOCK_DIV64); //bit rate = 16 MHz/128 = 125 kbit/sec
-  digitalWrite(slaveSelectPin, LOW);   //Slave is selected
 }
 
 void loop()
 {
+  digitalWrite(slaveSelectPin, LOW);   //Slave is selected
   for (uint8_t i = 0; i < sizeof(send); ++i)
   {
     receive[i] = SPI.transfer(send[i]);
   }
+  digitalWrite(slaveSelectPin, HIGH);   //Slave is selected
 
   Serial.print("Master:  Slave schickte mir:");
   for (uint8_t j = 0; j < sizeof(receive); ++j)
