@@ -40,4 +40,5 @@ Finally, we delve into one of the most important bus systems for microcontroller
 Feel free to explore the sketches and use them as a reference or starting point for your projects. This repository is designed to support your learning journey and provide practical examples to reinforce theoretical concepts discussed in class.
 
 Happy coding!
-Bernd Donner
+
+Dr. Bernd Donner
